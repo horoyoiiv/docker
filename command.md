@@ -53,7 +53,12 @@ redis                     4.0                 13c9467679a5        5 days ago    
 docker run -it [이미지명]
 ```
 
-#### 1.5. PORT Mapping  
+#### 1.5. 환경 변수 세팅  
+
+-e : 컨테이너에서 사용할 환경변수를 세팅할 수 있다.  
+```
+docker run -e WATER=123 [이미지명]
+```
 
 
 
