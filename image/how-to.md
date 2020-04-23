@@ -55,6 +55,11 @@ Dockerfile이 위치한 (.) 곳의 파일들을 image의 /opt/source-code 디렉
 ## 3. docker build .  
 . : Dockerfile 이 위치한 곳  
 
+#### 3.1. docker build -t sleepy-ubuntu .
+* -t 를 통해 해당 이미지의 이름을 설정할 수 있다.  
+
+
+
 ## 4. layered 구조의 이미지  
 
 * 이미지 자체는 한번 생성되면 Immutable  
