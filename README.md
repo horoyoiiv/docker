@@ -19,11 +19,18 @@
 2.3. ENTRYPOINT 는 하나의 명령어만 실행가능한데, 여러 명령어는 어떻게 실행하는가?  
 [shell scrippt를 ENTRYPOINT에서 실행해라!](/commands/shell.mc)  
 
+[2.4. exec](/commands/exec.md) : 컨테이너 외부에서 컨테이너 내부의 명령어를 실행하고 싶다면?   
+- /bin/bash  
+
+
+
 
 
 ## 3. docker network  
 
-[container's network setting](/network.md)  
+[1. container's network setting](/network.md)  
+[2. --link](/network/links.md) : 컨테이너 간 통신을 위하여 Dynamic IP가 거슬린다면...?  
+
 
 ## 4. docker persistence  
 
@@ -37,6 +44,10 @@
 # Image  
 
 [1. Dockerfile 작성과 Instructions](/image/how-to.md)  
+
+# Docker compose  
+[1. docker compose란?](/docker-compose/what.md) : 여러 컨테이너를 하나의 config파일로 관리.  
+
 
 
 
