@@ -45,4 +45,55 @@ services:
 
 #### 2. docker-compse up -d 실행 시  
 
+```
+$ docker network ls        
+NETWORK ID          NAME                         DRIVER              SCOPE
+46374da32272        bridge                       bridge              local
+bbd8bb5a3d0c        documents_of_edgex_default   bridge              local
+```
+* docker-compose가 실행된 디렉토리 명 뒤에 default가 붙은 네트워크 생성   
+* network 확인 시  
+```
+docker network ls
+```
+* 아래와 같이, 컴포즈에 속한 컨테이너들은 같은 서브넷 망 안에 포함된다.  
+* 도커 컴포즈는 links가 필요없다.  
+```
+[
+    {
+        "Name": "documents_of_edgex_default",
+        "Id": "bbd8bb5a3d0c47fadfaf81a5e0707566ad8f360531f53f0659d4622a4331d100",
+        "Created": "2020-04-26T03:45:00.913981754+09:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.23.0.0/16",
+                    "Gateway": "172.23.0.1"
+                }
+            ]
+        },
+       ....
+       "Containers": {
+            "847525609bec37f59748732cb2abbd2af8088e4cffa245e6f4e4587384fd74ce": {
+                "Name": "documents_of_edgex_db_1",
+                "EndpointID": "369c6e59c0013bed9d143042a3ab4b9e2e8653bc1a89658b8406a37ff3c7c4b0",
+                "MacAddress": "02:42:ac:17:00:02",
+                "IPv4Address": "172.23.0.2/16",
+                "IPv6Address": ""
+            },
+            "a6fba22430ba9366fb6c41845294ad489611ba895f6d103aad28e2ef1b1c981b": {
+                "Name": "documents_of_edgex_app_1",
+                "EndpointID": "f9c6b7364d7ecbb591ca358582b6162bc8094fa4c498baab645d19cff660ea83",
+                "MacAddress": "02:42:ac:17:00:03",
+                "IPv4Address": "172.23.0.3/16",
+                "IPv6Address": ""
+            }
+        }    
+```
+
 
