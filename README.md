@@ -46,10 +46,17 @@
 [1. Dockerfile 작성과 Instructions](/image/how-to.md)  
 
 # Docker compose  
-[1. docker compose란?](/docker-compose/what.md) : 여러 컨테이너를 하나의 config파일로 관리.  
-[2. 키워드](/docker-compose/keyword.md) : 어떻게 설정할 수 있는가?  
-[3. 도커 컴포즈의 네티워크](/docker-compose/network.md) : 자동으로 하나의 디폴트 네트워크에 배치된다.  
-
+#### [1. docker compose란?](/docker-compose/what.md)  
+여러 컨테이너를 하나의 config파일로 관리.  
+#### [2. 키워드](/docker-compose/keyword.md)   
+어떻게 설정할 수 있는가?  
+#### [3. 도커 컴포즈의 네티워크](/docker-compose/network.md)   
+자동으로 하나의 디폴트 네트워크에 배치된다.  
+#### [4.기본 구조](/docker-compose/basic.md)  
+ * ports vs expose  
+ * networks : aliases  
+ * container-name  
+ 
 
 
 
